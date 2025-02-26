@@ -48,12 +48,8 @@ void solve(){
 
     for (int i = 0; i < n; ++i) {
         int target = x-v[i].first;
-        int l = 0, r = n-1;
-        while (true){
-            if (l==i) l++;
-            if (r==i) r--;
-            if (l>=r) break;
-
+        int l = i+1, r = n-1;
+        while (l<r){
             if (v[l].first + v[r].first < target) l++;
             else if (v[l].first + v[r].first > target) r--;
             else {
