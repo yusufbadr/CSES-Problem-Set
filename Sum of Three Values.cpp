@@ -27,15 +27,6 @@ void YusufBadr(){
 int dx[4] = {0, 1, 0, -1};
 int dy[4] = {1, 0, -1, 0};
 
-bool valid(const int& t, const vector<int>& v, const int& n){
-    int total = 0;
-    for (auto k:v){
-        total+=t/k;
-        if (total >=n) return true;
-    }
-    return total>=n;
-}
-
 
 void solve(){
     int n, x; cin >> n >> x;
